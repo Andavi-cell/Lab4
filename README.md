@@ -6,7 +6,7 @@ The height of an object can be calculated using trigonometry. In this example, a
 This forms a right triangle where the tangent of the angle is equal to the ratio of the opposite length over the adjacent length of the triangle. To find the height of the building, we need to add the length 
 of the opposite side to the height of the person.
 
-![Building](Building Height.png)
+![Building](BuildingHeight.png)
 
 ## Directions
 After accepting the Lab4 assignment, clone your Lab4 repository to your virtual machine, add your solution code and test it against the correct results that match the interface prototype example shown below. 
