@@ -9,7 +9,7 @@ of the opposite side to the height of the person.
 <img src="BuildingHeight.png" alt="Building" width="250">
 
 ## Directions
-After accepting the Lab4 assignment, clone your Lab4 repository to your virtual machine, add your solution code and test it against the correct results that match the interface prototype example shown below. <b>Note: I'm asking you to figure out the formula's required for this solution. I will provide them if requested.</b>
+After accepting the Lab4 assignment, clone your Lab4 repository to your virtual machine, add your solution code and test it against the correct results that match the interface prototype example shown below. <b>Note: I'm asking you to do the research to find the formula's required for this solution. I will provide them if requested.</b>
 Once any errors are corrected and the program is working correctly, push it back to your repositiry which will spin up a test of your solution code. Once it has passed the auto-test you will need to submit it 
 to Canvas under the Lab4 assignment.
 
