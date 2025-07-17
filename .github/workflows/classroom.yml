@@ -1,6 +1,6 @@
 name: Autograding Tests
 'on':
-- workflow_dispatch
+- push
 - repository_dispatch
 permissions:
   checks: write
@@ -20,16 +20,49 @@ jobs:
         test-name: Test 1
         setup-command: g++ Lab4.cpp -o Lab4
         command: "./Lab4"
-        input: |-
+        input: |
           5.8
           150
           57
         expected-output: The height of the building is 237 feet tall.
         comparison-method: contains
         timeout: 1
+        max-score: 5
+    - name: Test 2
+      id: test-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test 2
+        setup-command: g++ Lab4.cpp -o Lab4
+        command: "./Lab4"
+        input: |
+          5
+          42
+          43
+        expected-output: The height of the building is 44 feet tall.
+        comparison-method: contains
+        timeout: 1
+        max-score: 5
+    - name: Test 3
+      id: test-3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test 3
+        setup-command: g++ Lab4.cpp -o Lab4
+        command: "./Lab4"
+        input: |
+          6.17
+          320
+          66
+        expected-output: The height of the building is 725 feet tall.
+        comparison-method: contains
+        timeout: 1
+        max-score: 5
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST-1_RESULTS: "${{steps.test-1.outputs.result}}"
+        TEST-2_RESULTS: "${{steps.test-2.outputs.result}}"
+        TEST-3_RESULTS: "${{steps.test-3.outputs.result}}"
       with:
-        runners: test-1
+        runners: test-1,test-2,test-3
