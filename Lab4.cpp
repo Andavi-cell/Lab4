@@ -28,8 +28,7 @@ int main() {
     //Output the result
     std::cout.setf(std::ios::fixed);
     std::cout.precision(0);
-    std::cout << "Your height of the building is " << height2 <<" feet tall.\n";
-
+    std::cout << "The height of the building is " << height2 <<" feet tall.\n";
 
 
 }
